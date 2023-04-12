@@ -71,7 +71,6 @@ main {
 
 .new::before {
     content: '';
-    /* position: absolute; */
     height: 100%;
     background-color: var(--clr_dark_grayish_cyan);
     width: 5px;
@@ -90,7 +89,6 @@ h5.position {
 .left-section {
     display: flex;
     gap: 1rem;
-    /* flex-grow: 1; */
 }
 
 .left-section img {
@@ -109,8 +107,6 @@ h5.position {
 }
 
 .new, .featured {
-    
-    /* padding: 1em; */
     text-transform: uppercase;
     color: #fff;
     padding: .2em .5em;
@@ -130,14 +126,8 @@ h5.position {
 .job-details-bottom {
     display: flex;
     flex-direction: row;
-    /* gap: 1rem; */
     color: var(--clr_very_drk_grayish_cyan);
-    /* justify-items: center; */
-    /* align-items: center; */
-    /* justify-content: var(--fw_700) */
-    /* justify-content: space-around; */
     gap: .5rem;
-    /* align-content: start; */
     align-items: center;
 
 }
@@ -147,7 +137,6 @@ hr {
     height: 5px;
     background-color: var(--clr_very_drk_grayish_cyan);
     border-radius: 50%;
-    /* margin-top: 10px; */
 
 }
 
@@ -155,7 +144,6 @@ hr {
     margin-left: auto;
     display: flex;
     align-items: center;
-    /* flex-grow: 1; */
 }   
 
 .company-name, .requirements li {
@@ -173,7 +161,6 @@ hr {
         flex-direction: column;
         justify-items: flex-start;
         gap: 2rem;
-        /* margin-left: 0; */
     }
 
     .right-section {
@@ -191,8 +178,6 @@ hr {
 
     .card {
         width: 100%;
-        /* flex-direction: column; */
-        /* gap: 2rem; */
     }
 
 
@@ -204,13 +189,10 @@ hr {
         width: 60px;
         position: absolute;
         top: -2.3rem;
-
-        /* bottom: -20px; */
     }
      
 
     .left-section {
-        /* gap: rem; */
         flex-direction: column;
     }
 
@@ -236,10 +218,7 @@ hr {
 
     .right-section ul {
         flex-wrap: wrap;
-        /* justify-content: baseline; */
         justify-content: flex-start;
         justify-items: flex-start;
-        /* font-size: 18px; */
-        /* flex-direction: column; */
     }
 }
