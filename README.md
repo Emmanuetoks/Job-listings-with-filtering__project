@@ -50,7 +50,7 @@ I plan sharpening my React and CSS skills so as to improve my frontend skills, I
 ## Author
 -Armyofdeux 
 
-- Frontend Mentor - [@](https://www.frontendmentor.io/profile/Emmanuetoks)
+- Frontend Mentor - [@][(https://www.frontendmentor.io/profile/Emmanuetoks)
 
 
 
