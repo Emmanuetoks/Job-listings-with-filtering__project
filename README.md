@@ -1,4 +1,4 @@
-# Job-listings-with-filtering__project 
+
 
 # Frontend Mentor - Job listings with filtering solution
 
@@ -12,7 +12,6 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -31,9 +30,9 @@ This is job listing website with filtering, you are able to filter the job cards
 - Live Site URL: [https://job-list-app-ff4567.netlify.app/)
 
 ## My process
-I created my React App using Vite module bundler
-I created My custom components which can be seen in the components folder
-I opened a netlify account using GitHub and activated a continous development in my webiste repo main branch
+-I created my React App using Vite module bundler
+-I created My custom components which can be seen in the components folder
+-I opened a netlify account using GitHub and activated a continous development in my webiste repo main branch
 
 ### Built with
 
@@ -41,19 +40,17 @@ I opened a netlify account using GitHub and activated a continous development in
 - CSS custom properties
 - Flexbox
 - [React](https://reactjs.org/) - JS library
-- Vite](https://vitejs.dev) - Module Bundler
+- [Vite](https://vitejs.dev) - Module Bundler
 
 ### Continued development
 
-I want to become a pro at styling webistes using css amd any libraries associated with it 
-I want to become a pro React developer and build dynamic websites with React
-I plan on learning how to use API's and develop web apps using API's
+I plan sharpening my React and CSS skills so as to improve my frontend skills, I will be creating responsive website using React. I will be incorpating Sass CSS preprocessor in my projects very soon but I will first learn it. 
 
 
 ## Author
 -Armyofdeux 
 
-- Frontend Mentor - [@](https://www.frontendmentor.io/profile/Emmanuetoks)
+- Frontend Mentor - [@][(https://www.frontendmentor.io/profile/Emmanuetoks)
 
 
 
