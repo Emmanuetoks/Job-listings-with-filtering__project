@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Card from './Card'
-import jobData from '../data'
+import data from '../data/data.json'
 
 const App = () => {
     return (
@@ -9,7 +9,7 @@ const App = () => {
             <Header />
             <main>
 
-                {jobData.map((data) => {
+                {data.map((data) => {
                     return <Card
                         key = {data.id}
                         image = {data.logo}
