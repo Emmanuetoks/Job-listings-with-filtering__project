@@ -15,8 +15,20 @@
     box-sizing: border-box;
 }
 
+/*Add margin and padding to all the elements  */
 h5, p {
     margin: 0;
+}
+
+h5 {
+    font-weight: var(--fw_700);
+}
+
+hr {
+    width: 5px;
+    height: 5px;
+    background-color: var(--clr_very_drk_grayish_cyan);
+    border-radius: 50%;
 }
 
 header {
@@ -32,6 +44,8 @@ body {
 img {
     width: 50px;
 }
+
+/* Use a global variable to set the default style for all ul elements in the site */
 ul.requirements {
     padding: 0;
     list-style: none;
@@ -46,14 +60,11 @@ ul.requirements {
     height: inherit;
 }
 
-
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-top: 5rem;
     margin: 5rem 0;
 }
 
@@ -81,11 +92,9 @@ main {
     bottom: 0;
 }
 
-h5.position {
-    font-weight: var(--fw_700);
-}
 
 
+/* Create a custom class with display flex for all flexbox elemetns in my website */
 .left-section {
     display: flex;
     gap: 1rem;
@@ -122,21 +131,12 @@ h5.position {
     background-color: black;
 }
 
-
 .job-details-bottom {
     display: flex;
     flex-direction: row;
     color: var(--clr_very_drk_grayish_cyan);
     gap: .5rem;
     align-items: center;
-
-}
-
-hr {
-    width: 5px;
-    height: 5px;
-    background-color: var(--clr_very_drk_grayish_cyan);
-    border-radius: 50%;
 
 }
 
@@ -150,11 +150,21 @@ hr {
     color: var(--clr_dark_grayish_cyan);
     font-weight: var(--fw_700);
 }
+
 .requirements li {
     background-color: var(--clr_light_grayish_cyan);
     padding: .4rem;
     border-radius: 5px;
 }
+
+
+/* 
+.job-details-bottom p:not(:first-child)::before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    background-color: black;
+} */
 
 @media (max-width: 1200px) {
 
@@ -200,7 +210,6 @@ hr {
     header {
         background-image: url('/images/bg-header-mobile.svg');
     }
-
 
     main {
         padding: 0 1em;
