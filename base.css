@@ -20,7 +20,7 @@ h5, p {
 }
 
 header {
-    background-image: url('images/bg-header-desktop.png');
+    background-image: url('/images/bg-header-desktop.svg');
     background-color: var(--clr_dark_grayish_cyan);
     height: 100px;
 }
@@ -204,7 +204,7 @@ hr {
     }
 
     header {
-        background-image: url('images/bg-header-mobile.png');
+        background-image: url('/images/bg-header-mobile.svg');
     }
 
 
