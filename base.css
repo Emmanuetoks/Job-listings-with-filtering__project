@@ -157,7 +157,9 @@ hr {
 }
 
 @media (max-width: 1200px) {
+
     .card {
+        width: 100%;
         flex-direction: column;
         justify-items: flex-start;
         gap: 2rem;
@@ -169,21 +171,12 @@ hr {
         justify-content: center;
     }
 
-    .left-section {
-        gap: 2rem
-        ;
-    }
-}
-
-@media (max-width: 900px) {
-
-    .card {
-        width: 100%;
-    }
-
-
     main {
         gap: 5rem;
+    }
+
+    .left-section {
+        gap: 2rem;
     }
 
     .left-section img {
