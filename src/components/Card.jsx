@@ -1,13 +1,85 @@
 import React from 'react'
 
 const Card = (props) => {
+    let index = 0;
+    let shouldDisplay;
+    const updateFilterBox = props.addFilter;
+
+    const unfilter = (event) => {
+        const clickedFilter = event.target.parentElement;
+        const clickedFilterClass = event.target.parentElement.className;
+
+        let filterName = event.target.parentElement.outerText
+        let filterLlist = document.querySelectorAll('.filter-box ul li')
+
+        filterLlist.forEach((filter) => {
+            if (filter.textContent === filterName) {
+                filter.classList.add('hide');
+            }
+
+        })
+
+        let cards = document.querySelectorAll('.card');
+        let jobRequirements = document.querySelectorAll('.card ul.requirements');
+
+        cards.forEach((card, index) => {
+            let filterCriteriaStringList = [];
+            let filterCriteriaNodeList = jobRequirements[index].querySelectorAll(`.${clickedFilterClass}`);
+
+            filterCriteriaNodeList.forEach((lItem) => {
+                filterCriteriaStringList.push(lItem.innerHTML)
+            })
+
+            if (filterCriteriaStringList.includes(clickedFilter)) {
+                card.classList.remove('hide')
+            }
+        });
+    }
+
+    const filter = (event) => {
+        const filterBox = document.getElementById('filterBox');
+        filterBox.classList.add('filter-box--show');
+
+        const clickedFilter = event.target.outerText;
+        const clickedFilterClass = event.target.className;
+
+        updateFilterBox((prevValue) => {
+            return ([...prevValue,
+            <li className={clickedFilterClass}>
+                {clickedFilter}
+
+
+                    <img onClick={unfilter} role='button' className='filter-box__icon-remove' src='/images/icon-remove.svg' />
+
+            </li>
+            ])
+        })
+
+        let cards = document.querySelectorAll('.card');
+        let jobRequirements = document.querySelectorAll('.card ul.requirements');
+
+        cards.forEach((card, index) => {
+            let filterCriteriaStringList = [];
+            let filterCriteriaNodeList = jobRequirements[index].querySelectorAll(`.${clickedFilterClass}`);
+
+            filterCriteriaNodeList.forEach((lItem) => {
+                filterCriteriaStringList.push(lItem.innerHTML)
+            })
+
+            if (filterCriteriaStringList.includes(clickedFilter)) {
+                card.classList.add('hide')
+            }
+
+        });
+
+    }
+
     let requiredLanguages = props.languages;
     let jobTools = props.tools
 
     const checkIfNew = () => {
         if (props.new) {
             return <p className='new'> new!</p>
-            
         }
     }
 
@@ -18,7 +90,7 @@ const Card = (props) => {
     }
 
     return (
-        <div className= 'card' >
+        <div className={`card ${shouldDisplay}`} >
             <section className='left-section'>
                 <img src={props.image} />
                 <div className='left-section-main'>
@@ -43,16 +115,16 @@ const Card = (props) => {
 
             <section className='right-section'>
                 <ul className='requirements'>
-                    <li>{props.role}</li>
-                    <li>{props.level}</li>
+                    <li role={'button'} className='role' onClick={filter}>{props.role}</li>
+                    <li role={'button'} className='level' onClick={filter}>{props.level}</li>
 
                     {requiredLanguages.map((language) => {
-                        return <li className=' language'>{language}</li>
+                        return <li role={'button'} key={index++} onClick={filter} className='language'>{language}</li>
                     })}
 
                     {
                         jobTools.map((tool) => {
-                            return <li className='tool'>{tool}</li>
+                            return <li role={'button'} onClick={filter} key={index++} className='tool'>{tool}</li>
                         })
                     }
                 </ul>
