@@ -6,6 +6,7 @@ const Card = (props) => {
     const updateFilterBox = props.addFilter;
 
     const unfilter = (event) => {
+        let dontHideBox = false;
         const clickedFilter = event.target.parentElement.outerText;
         const clickedFilterClass = event.target.parentElement.className;
 
@@ -17,6 +18,9 @@ const Card = (props) => {
                 filter.classList.add('hide');
             }
 
+            if (filter.className.split(' ').length === 1){
+                dontHideBox = true;
+            }
         })
 
         let cards = document.querySelectorAll('.card');
@@ -31,9 +35,14 @@ const Card = (props) => {
             })
 
             if (filterCriteriaStringList.includes(clickedFilter)) {
-                card.classList.remove('hide')
+                card.classList.remove('hide');
             }
         });
+
+        if (!dontHideBox) {
+            const filterBox = document.getElementById('filterBox');
+            filterBox.classList.remove('filter-box--show');
+        }
     }
 
     const filter = (event) => {
