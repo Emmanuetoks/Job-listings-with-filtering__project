@@ -173,13 +173,15 @@ main {
     box-shadow: 2px 2px 10px var(--clr_very_drk_grayish_cyan);
     display: none;
     padding: .5em 2em ;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
-    top: -70px;
     border-radius: 5px;
     gap: 1em;
+    margin: -3rem 0 0 0 ;
+}
+
+.filter-box ul {
+    flex-wrap: wrap;
 }
 
 .filter-box li {

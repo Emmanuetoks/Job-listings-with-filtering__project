@@ -6,7 +6,7 @@ const Card = (props) => {
     const updateFilterBox = props.addFilter;
 
     const unfilter = (event) => {
-        const clickedFilter = event.target.parentElement;
+        const clickedFilter = event.target.parentElement.outerText;
         const clickedFilterClass = event.target.parentElement.className;
 
         let filterName = event.target.parentElement.outerText
