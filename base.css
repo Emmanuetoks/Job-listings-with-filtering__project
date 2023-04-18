@@ -200,15 +200,12 @@ main {
 }
 
 .filter-box__icon-remove {
-    position: absolute;
-    right: -30px;
-    top: 0;
-    bottom: 0;
+    position: relative;
+    right: -6px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     width: 30px;
     padding: .6rem;
-    height: 100%;   
     background-color: var(--clr_dark_grayish_cyan);
 }
 
@@ -259,7 +256,7 @@ main {
     }
 
     .filter-box ul {
-        gap: 2.3rem;
+        gap: .5rem;
     }
 
     main {
